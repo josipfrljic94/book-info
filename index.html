@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content"></div>
+  <script>
+
+    //   Load books
+//     function LoadBooks(){
+//         const xhr=new XMLHttpRequest();
+//         xhr.open('GET','https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyCmU0iV8B7tElJbuNmBj2KEh_pEvj0I_7w')
+        
+//         xhr.onload=function(){
+//             if(this.status==200){
+//                 const books=JSON.parse(this.response);
+//                 console.log(books);
+//             }
+//         }
+//             xhr.send()
+//     }
+//     LoadBooks();
+
+
+
+const data = null;
+
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+	if (this.readyState === this.DONE) {
+		console.log(this.responseText);
+	}
+});
+
+xhr.open("GET", "https://google-books.p.rapidapi.com/volumes?key=AIzaSyAOsteuaW5ifVvA_RkLXh0mYs6GLAD6ykc");
+xhr.setRequestHeader("x-rapidapi-key", "SIGN-UP-FOR-KEY");
+xhr.setRequestHeader("x-rapidapi-host", "google-books.p.rapidapi.com");
+
+xhr.send(data);
+  
+ </script>
+  
+    
+</body>
+</html>
